@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bqa-8D-Q4h">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bqa-8D-Q4h">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--KaizuCalc-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Menu" id="BYZ-38-t0r" customClass="ViewController" customModule="KaizuCalc" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,35 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIF-Yo-UKA">
-                                <rect key="frame" x="126" y="318" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="貝塚円から日本円"/>
-                                <connections>
-                                    <action selector="goKRJR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcQ-eh-L4v"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyD-Dn-1Bj">
-                                <rect key="frame" x="118" y="389" width="138" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="このアプリについて"/>
-                                <connections>
-                                    <action selector="goABOUT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIh-k9-x0A"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-Rg-xGh">
-                                <rect key="frame" x="126" y="248" width="123" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="日本円から貝塚円"/>
-                                <connections>
-                                    <action selector="goJRKR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gno-IY-cGK"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mwt-mb-QDf">
+                                <rect key="frame" x="10" y="144" width="355" height="144"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIF-Yo-UKA">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="貝塚円から日本円"/>
+                                        <connections>
+                                            <action selector="goKRJR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xcQ-eh-L4v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPK-Rg-xGh">
+                                        <rect key="frame" x="0.0" y="48" width="355" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="日本円から貝塚円"/>
+                                        <connections>
+                                            <action selector="goJRKR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gno-IY-cGK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyD-Dn-1Bj">
+                                        <rect key="frame" x="0.0" y="96" width="355" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="このアプリについて"/>
+                                        <connections>
+                                            <action selector="goABOUT:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIh-k9-x0A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mwt-mb-QDf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Z8X-XP-YWE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mwt-mb-QDf" secondAttribute="trailing" constant="10" id="fad-sn-esx"/>
+                            <constraint firstItem="mwt-mb-QDf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kdR-EH-ZBd"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="KaizuCalc" id="y2q-Id-3mB"/>
+                    <navigationItem key="navigationItem" title="Home" id="y2q-Id-3mB"/>
                     <connections>
                         <outlet property="ABOUT" destination="lyD-Dn-1Bj" id="OLr-nO-DSc"/>
                         <outlet property="JRKR" destination="cPK-Rg-xGh" id="FWa-cN-gNr"/>
@@ -68,38 +77,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="貝塚円から日本円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91n-1w-G65">
-                                <rect key="frame" x="16" y="75" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="35貝塚円=1日本円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-on-bzF">
-                                <rect key="frame" x="116" y="162" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-Ze-ztG">
-                                <rect key="frame" x="16" y="248" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-4D-ZdJ">
-                                <rect key="frame" x="156" y="318" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="計算する"/>
-                                <connections>
-                                    <action selector="calc_KRJR:" destination="iO1-H7-UJw" eventType="touchUpInside" id="udJ-2N-RWB"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lCq-9Z-4cr">
+                                <rect key="frame" x="10" y="244" width="355" height="121"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="貝塚円から日本円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91n-1w-G65">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="35貝塚円=1日本円" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRN-Ze-ztG">
+                                        <rect key="frame" x="0.0" y="30" width="355" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3tj-V0-CbH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-4D-ZdJ">
+                                        <rect key="frame" x="0.0" y="90" width="355" height="31"/>
+                                        <state key="normal" title="計算する"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="計算する"/>
+                                        <connections>
+                                            <action selector="calc_KRJR:" destination="iO1-H7-UJw" eventType="touchUpInside" id="udJ-2N-RWB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C02-hD-qnf"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lCq-9Z-4cr" firstAttribute="top" secondItem="C02-hD-qnf" secondAttribute="top" constant="200" id="8bk-bl-HYp"/>
+                            <constraint firstItem="lCq-9Z-4cr" firstAttribute="leading" secondItem="C02-hD-qnf" secondAttribute="leading" constant="10" id="h6T-qp-GZ1"/>
+                            <constraint firstItem="C02-hD-qnf" firstAttribute="trailing" secondItem="lCq-9Z-4cr" secondAttribute="trailing" constant="10" id="jyX-DR-IY7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="calc" destination="Fnf-4D-ZdJ" id="J13-1k-eqy"/>
@@ -110,191 +122,278 @@
             </objects>
             <point key="canvasLocation" x="822" y="34"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller about-->
         <scene sceneID="TuY-Th-6Tj">
             <objects>
-                <viewController id="TZK-uH-Czx" sceneMemberID="viewController">
+                <viewController id="TZK-uH-Czx" customClass="ViewController_about" customModule="KaizuCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NhG-aO-Ebe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="このアプリについて" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-3H-O2n">
-                                <rect key="frame" x="16" y="75" width="228" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="リンク集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-SP-xXE">
-                                <rect key="frame" x="16" y="249" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-sT-KPQ">
-                                <rect key="frame" x="16" y="113" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="これは貝塚円に関する計算をする電卓アプリだで。">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Android">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="版の紹介動画で">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="iOS">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="版も作って、どうぞ。ってことなので作りました。">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="オープンソースなので犯罪ほう助などの公序良俗に反する内容でなければ自由に改変してもらって大丈夫です。">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-7J-up1">
-                                <rect key="frame" x="16" y="287" width="343" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="https://www63.atwiki.jp/syamugame/">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Syamu_game @ ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="ウィキ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="  ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="https://youtu.be/Iag55pIKWzI">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" [">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="神動画">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="]syamu _game ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="オフ会">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" [">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="完全版">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="]  ">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="https://youtu.be/CLcbKqt5CEQ">
-                                        <attributes>
-                                            <font key="NSFont" size="16" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" 180126 1723 01(">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="復活した">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Syamu">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="さん">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="HiraginoSans-W3"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=")">
-                                        <attributes>
-                                            <font key="NSFont" size="13" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="13" name="Helvetica"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-8j-ahy">
+                                <rect key="frame" x="10" y="194" width="355" height="361.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="このアプリについて" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-3H-O2n">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyy-sT-KPQ">
+                                        <rect key="frame" x="0.0" y="30" width="355" height="114.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="これは貝塚円に関する計算をする電卓アプリだで。">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Android">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="版の紹介動画で">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="iOS">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="版も作って、どうぞ。ってことなので作りました。">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="オープンソースなので犯罪ほう助などの公序良俗に反する内容でなければ自由に改変してもらって大丈夫です。">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リンク集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-SP-xXE">
+                                        <rect key="frame" x="0.0" y="144.5" width="355" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-7J-up1">
+                                        <rect key="frame" x="0.0" y="174.5" width="355" height="187"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="https://www63.atwiki.jp/syamugame/">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Syamu_game @ ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="ウィキ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="HiraginoSans-W3"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="  ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="https://youtu.be/zZCmMY__Rk8">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="オフ会誰も来ずへこむ">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="完全版【">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Syamu Game">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="】(YouTube)">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="Times-Bold"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="  ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="https://www.nicovideo.jp/watch/sm29389990">
+                                                <attributes>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" ">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="13" name="Helvetica"/>
+                                                    <font key="NSOriginalFont" size="13" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="【">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Syamu_Game">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="】ホモと学ぶ大物">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="YouTube">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="ｒ">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" OFF">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="会誰も来ずへこむ【オフ会">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="0">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Helvetica"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="人】(niconico)">
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="HiraginoSans-W3"/>
+                                                    <real key="NSKern" value="0.0"/>
+                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <real key="NSStrokeWidth" value="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Ok-Qm-reL"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jei-8j-ahy" firstAttribute="top" secondItem="8Ok-Qm-reL" secondAttribute="top" constant="150" id="V2Z-4j-a3Y"/>
+                            <constraint firstItem="Jei-8j-ahy" firstAttribute="leading" secondItem="8Ok-Qm-reL" secondAttribute="leading" constant="10" id="iDo-co-mit"/>
+                            <constraint firstAttribute="trailing" secondItem="Jei-8j-ahy" secondAttribute="trailing" constant="10" id="qmS-nP-nBw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9d-dx-mbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,38 +408,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1日本円=35貝塚円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YH-mX-2DA">
-                                <rect key="frame" x="116" y="162" width="143" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kze-Ul-ata">
-                                <rect key="frame" x="16" y="248" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-Kz-3Kl">
-                                <rect key="frame" x="156" y="318" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="計算する"/>
-                                <connections>
-                                    <action selector="calc_JRKR:" destination="Msf-mH-v7p" eventType="touchUpInside" id="kuN-uY-7x6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日本円から貝塚円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-zt-ab3">
-                                <rect key="frame" x="16" y="75" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ffy-0n-VZk">
+                                <rect key="frame" x="10" y="244" width="355" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本円から貝塚円" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zZ-zt-ab3">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="29"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1日本円=35貝塚円" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kze-Ul-ata">
+                                        <rect key="frame" x="0.0" y="29" width="355" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="hNU-YB-8S7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-Kz-3Kl">
+                                        <rect key="frame" x="0.0" y="89" width="355" height="31"/>
+                                        <state key="normal" title="計算する"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="計算する"/>
+                                        <connections>
+                                            <action selector="calc_JRKR:" destination="Msf-mH-v7p" eventType="touchUpInside" id="kuN-uY-7x6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="eNs-JW-c60"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ffy-0n-VZk" firstAttribute="top" secondItem="eNs-JW-c60" secondAttribute="top" constant="200" id="RV5-o4-XWp"/>
+                            <constraint firstItem="Ffy-0n-VZk" firstAttribute="leading" secondItem="eNs-JW-c60" secondAttribute="leading" constant="10" id="dhE-mb-Yjd"/>
+                            <constraint firstItem="eNs-JW-c60" firstAttribute="trailing" secondItem="Ffy-0n-VZk" secondAttribute="trailing" constant="10" id="eRt-Xh-z8g"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="calc" destination="BHe-Kz-3Kl" id="sEG-Me-ARg"/>
@@ -356,7 +458,7 @@
             <objects>
                 <navigationController id="bqa-8D-Q4h" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zy8-gN-C8j">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BC658CF27BCE428003F3072 /* ViewController_about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC658CE27BCE428003F3072 /* ViewController_about.swift */; };
 		7460997220BAE1FB00874506 /* ViewController_calcJRKR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */; };
 		7460997420BAE78900874506 /* ViewController_calcKRJR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460997320BAE78900874506 /* ViewController_calcKRJR.swift */; };
 		7460997620BAEE4000874506 /* export_ipa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7460997520BAEE4000874506 /* export_ipa.plist */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BC658CD27BCD73E003F3072 /* KaizuCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaizuCalc.entitlements; sourceTree = "<group>"; };
+		1BC658CE27BCE428003F3072 /* ViewController_about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController_about.swift; path = ../../ViewController_about.swift; sourceTree = "<group>"; };
 		7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_calcJRKR.swift; sourceTree = "<group>"; };
 		7460997320BAE78900874506 /* ViewController_calcKRJR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_calcKRJR.swift; sourceTree = "<group>"; };
 		7460997520BAEE4000874506 /* export_ipa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = export_ipa.plist; sourceTree = "<group>"; };
@@ -103,11 +106,13 @@
 		74A2CC4020BABB250081C651 /* KaizuCalc */ = {
 			isa = PBXGroup;
 			children = (
+				1BC658CD27BCD73E003F3072 /* KaizuCalc.entitlements */,
 				74A2CC4120BABB250081C651 /* AppDelegate.swift */,
 				74A2CC4320BABB250081C651 /* ViewController.swift */,
 				7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */,
 				7460997320BAE78900874506 /* ViewController_calcKRJR.swift */,
 				74A2CC4520BABB250081C651 /* Main.storyboard */,
+				1BC658CE27BCE428003F3072 /* ViewController_about.swift */,
 				74A2CC4820BABB280081C651 /* Assets.xcassets */,
 				74A2CC4A20BABB280081C651 /* LaunchScreen.storyboard */,
 				74A2CC4D20BABB280081C651 /* Info.plist */,
@@ -197,7 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = asaken1021;
 				TargetAttributes = {
 					74A2CC3D20BABB250081C651 = {
@@ -214,7 +219,7 @@
 				};
 			};
 			buildConfigurationList = 74A2CC3920BABB250081C651 /* Build configuration list for PBXProject "KaizuCalc" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7460997220BAE1FB00874506 /* ViewController_calcJRKR.swift in Sources */,
+				1BC658CF27BCE428003F3072 /* ViewController_about.swift in Sources */,
 				74A2CC4420BABB250081C651 /* ViewController.swift in Sources */,
 				7460997420BAE78900874506 /* ViewController_calcKRJR.swift in Sources */,
 				74A2CC4220BABB250081C651 /* AppDelegate.swift in Sources */,
@@ -350,6 +356,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -375,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -410,6 +417,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -429,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -442,11 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KaizuCalc/KaizuCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,8 +464,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = asaken1021.KaizuCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -463,11 +474,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KaizuCalc/KaizuCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalc/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,8 +488,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = asaken1021.KaizuCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
@@ -486,7 +500,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalcTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +521,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalcTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -527,7 +541,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalcUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,7 +561,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39V8KMU524;
+				DEVELOPMENT_TEAM = M536KQUXZ7;
 				INFOPLIST_FILE = KaizuCalcUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
