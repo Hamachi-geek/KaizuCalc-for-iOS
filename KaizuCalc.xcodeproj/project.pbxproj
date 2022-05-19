@@ -455,7 +455,7 @@
 				CODE_SIGN_ENTITLEMENTS = KaizuCalc/KaizuCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M536KQUXZ7;
+				DEVELOPMENT_TEAM = 54CRDT797G;
 				INFOPLIST_FILE = KaizuCalc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
@@ -463,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asaken1021.KaizuCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = kaizuCalc.haruk.in;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
@@ -479,7 +479,7 @@
 				CODE_SIGN_ENTITLEMENTS = KaizuCalc/KaizuCalc.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M536KQUXZ7;
+				DEVELOPMENT_TEAM = 54CRDT797G;
 				INFOPLIST_FILE = KaizuCalc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
@@ -487,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = asaken1021.KaizuCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = kaizuCalc.haruk.in;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
