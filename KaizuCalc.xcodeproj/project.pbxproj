@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BC658CF27BCE428003F3072 /* ViewController_about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC658CE27BCE428003F3072 /* ViewController_about.swift */; };
+		1B1DA31E28369BAC00528D05 /* ViewController_about.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DA31D28369BAC00528D05 /* ViewController_about.swift */; };
 		7460997220BAE1FB00874506 /* ViewController_calcJRKR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */; };
 		7460997420BAE78900874506 /* ViewController_calcKRJR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7460997320BAE78900874506 /* ViewController_calcKRJR.swift */; };
 		7460997620BAEE4000874506 /* export_ipa.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7460997520BAEE4000874506 /* export_ipa.plist */; };
@@ -38,8 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B1DA31D28369BAC00528D05 /* ViewController_about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_about.swift; sourceTree = "<group>"; };
+		1B1DA31F28369C2C00528D05 /* ViewController_about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController_about.swift; path = KaizuCalc/ViewController_about.swift; sourceTree = "<group>"; };
 		1BC658CD27BCD73E003F3072 /* KaizuCalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaizuCalc.entitlements; sourceTree = "<group>"; };
-		1BC658CE27BCE428003F3072 /* ViewController_about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController_about.swift; path = ../../ViewController_about.swift; sourceTree = "<group>"; };
 		7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_calcJRKR.swift; sourceTree = "<group>"; };
 		7460997320BAE78900874506 /* ViewController_calcKRJR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_calcKRJR.swift; sourceTree = "<group>"; };
 		7460997520BAEE4000874506 /* export_ipa.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = export_ipa.plist; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		74A2CC3520BABB250081C651 = {
 			isa = PBXGroup;
 			children = (
+				1B1DA31F28369C2C00528D05 /* ViewController_about.swift */,
 				74A2CC4020BABB250081C651 /* KaizuCalc */,
 				74A2CC5520BABB280081C651 /* KaizuCalcTests */,
 				74A2CC6020BABB290081C651 /* KaizuCalcUITests */,
@@ -112,11 +114,11 @@
 				7460997120BAE1FB00874506 /* ViewController_calcJRKR.swift */,
 				7460997320BAE78900874506 /* ViewController_calcKRJR.swift */,
 				74A2CC4520BABB250081C651 /* Main.storyboard */,
-				1BC658CE27BCE428003F3072 /* ViewController_about.swift */,
 				74A2CC4820BABB280081C651 /* Assets.xcassets */,
 				74A2CC4A20BABB280081C651 /* LaunchScreen.storyboard */,
 				74A2CC4D20BABB280081C651 /* Info.plist */,
 				7460997520BAEE4000874506 /* export_ipa.plist */,
+				1B1DA31D28369BAC00528D05 /* ViewController_about.swift */,
 			);
 			path = KaizuCalc;
 			sourceTree = "<group>";
@@ -271,8 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B1DA31E28369BAC00528D05 /* ViewController_about.swift in Sources */,
 				7460997220BAE1FB00874506 /* ViewController_calcJRKR.swift in Sources */,
-				1BC658CF27BCE428003F3072 /* ViewController_about.swift in Sources */,
 				74A2CC4420BABB250081C651 /* ViewController.swift in Sources */,
 				7460997420BAE78900874506 /* ViewController_calcKRJR.swift in Sources */,
 				74A2CC4220BABB250081C651 /* AppDelegate.swift in Sources */,
