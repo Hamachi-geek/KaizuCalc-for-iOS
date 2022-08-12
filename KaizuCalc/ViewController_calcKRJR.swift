@@ -16,7 +16,7 @@ class ViewController_calcKRJR: UIViewController {
     var jpy :Double! = 0.0
     var kzy :Double! = 0.0
     var jpyText :String! = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //AvoidDarckMode
@@ -45,15 +45,12 @@ class ViewController_calcKRJR: UIViewController {
     
     func makeAlert(){
         jpyText = String(jpy)
-        let alert :UIAlertController = UIAlertController(title: "警告", message: jpyText + "円", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let defaultAction :UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("OK")
-        })
-        
-        alert.addAction(defaultAction)
-        
+        let alert = UIAlertController(title: "警告", message: jpyText + "円", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(ok)
+    
         present(alert, animated: true, completion: nil)
     }
 }

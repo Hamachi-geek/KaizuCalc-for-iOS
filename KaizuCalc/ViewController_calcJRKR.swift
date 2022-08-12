@@ -45,15 +45,12 @@ class ViewController_calcJRKR: UIViewController {
     
     func makeAlert(){
         kzyText = String(kzy)
-        let alert :UIAlertController = UIAlertController(title: "警告", message: kzyText + "貝塚円", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "警告", message: kzyText + "貝塚円", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+                self.dismiss(animated: true, completion: nil)
+            }
+            alert.addAction(ok)
         
-        let defaultAction :UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("OK")
-        })
-        
-        alert.addAction(defaultAction)
-        
-        present(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
     }
 }
